@@ -49,9 +49,8 @@
             width: 80px;
             height: 80px;
             margin-bottom: 20px;
-            border-radius: 50%;
-            border: none;              /* sin marco */
-            object-fit: cover;         /* recorta el PNG dentro del círculo */
+            border-radius: 20px;
+            border: 4px solid #2A1F4D;
         }
 
         .hero-title {
@@ -287,4 +286,243 @@
         }
 
         .phase-items {
-            list-style:
+            list-style: none;
+            font-size: 1.2rem;
+            color: #FFE5E5;
+            line-height: 2;
+        }
+
+        .phase-items li::before {
+            content: '• ';
+            color: #FFB6D9;
+            font-weight: bold;
+        }
+
+        /* How to Buy Section */
+        .how-to-buy {
+            background: rgba(42, 31, 77, 0.5);
+            padding: 80px 20px;
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+
+        .step {
+            background: #FFE5B4;
+            border: 4px solid #2A1F4D;
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .step-number {
+            background: #FF69B4;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: 3px solid #2A1F4D;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            font-size: 1.3rem;
+            color: #3B2E66;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 4px solid #2A1F4D;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            color: #A7C7E7;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .button-group {
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-box {
+                padding: 30px;
+            }
+
+            .about-text {
+                font-size: 1.1rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="star">⭐</div>
+        <div class="star">✨</div>
+        <div class="star">⭐</div>
+        <div class="star">✨</div>
+        
+        <div class="hero-container">
+            <div class="hero-left">
+               <img src="ninu-logo.png" alt="NOSTALGINU Logo" class="logo-small">
+                <h1 class="hero-title">NOSTALGINU<br>($NINU)</h1>
+                <p class="hero-subtitle">The Dog From Your Childhood. Reborn.</p>
+                <div class="button-group">
+                    <button class="btn btn-primary" disabled>Buy $NINU</button>
+                    <a href="#" class="btn btn-telegram">Telegram</a>
+                    <a href="#" class="btn btn-twitter">Twitter</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img src="ninu-character.png" alt="NOSTALGINU Character" class="character-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- What is NOSTALGINU Section -->
+    <section class="section">
+        <div class="about-box">
+            <span class="section-icon">⭐</span>
+            <h2 class="section-title">What is NOSTALGINU?</h2>
+            <p class="about-text">
+                Nostalginu is a nostalgic memecoin living on Solana.<br>
+                The digital dog you forgot you loved — a mix of 90s Tamagotchi, GameBoy pixels and early internet chaos.<br>
+                No utility. No promises. Just vibes, memes and pure childhood energy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section class="tokenomics">
+        <div class="section">
+            <h2 class="section-title" style="text-align: center;">Tokenomics</h2>
+            
+            <div class="token-supply">
+                <div class="supply-title">Total Supply</div>
+                <div class="supply-value">1,000,000,000 $NINU</div>
+            </div>
+
+            <div class="cards-container">
+                <div class="token-card">
+                    <div class="token-title">Creator Reserve</div>
+                    <div class="token-value">70%</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-title">Liquidity</div>
+                    <div class="token-value">20%</div>
+                </div>
+                <div class="token-card">
+                    <div class="token-title">Community & Memes</div>
+                    <div class="token-value">10%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap">
+        <h2 class="section-title" style="text-align: center;">Roadmap Meme</h2>
+        <div class="roadmap-container">
+            <div class="phase">
+                <h3 class="phase-title">Phase 1 – Born in a Floppy Disk</h3>
+                <ul class="phase-items">
+                    <li>Launch</li>
+                    <li>Website</li>
+                    <li>First 100 nostalgics</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3 class="phase-title">Phase 2 – GameBoy Green Candle</h3>
+                <ul class="phase-items">
+                    <li>Listings</li>
+                    <li>Meme contests</li>
+                    <li>Stickers</li>
+                </ul>
+            </div>
+
+            <div class="phase">
+                <h3 class="phase-title">Phase 3 – Childhood Bullrun</h3>
+                <ul class="phase-items">
+                    <li>Retro collabs</li>
+                    <li>Survive the bear</li>
+                    <li>Embrace the cringe</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section class="how-to-buy">
+        <div class="section">
+            <h2 class="section-title" style="text-align: center;">How to Buy $NINU</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Download Phantom</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Add SOL</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Swap for $NINU on Raydium</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-text">Don't overthink it, it's a meme dog</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">
+            NOSTALGINU ($NINU) is a meme token with no intrinsic value or expectation of financial return.<br>
+            This project is for nostalgia and fun only.
+        </p>
+    </footer>
+</body>
+</html>
