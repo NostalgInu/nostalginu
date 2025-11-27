@@ -87,12 +87,12 @@
             display: inline-block;
         }
 
-        .btn:hover:not(:disabled) {
+        .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 0 #2A1F4D;
         }
 
-        .btn:active:not(:disabled) {
+        .btn:active {
             transform: translateY(0);
             box-shadow: 0 2px 0 #2A1F4D;
         }
@@ -100,11 +100,6 @@
         .btn-primary {
             background: #FFE5B4;
             color: #3B2E66;
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
         }
 
         .btn-telegram {
@@ -185,70 +180,6 @@
             color: #FFE5E5;
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        /* Tokenomics Section */
-        .tokenomics {
-            background: rgba(42, 31, 77, 0.5);
-            padding: 80px 20px;
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 40px auto 0;
-        }
-
-        .token-card {
-            background: #FFE5E5;
-            border: 4px solid #2A1F4D;
-            border-radius: 25px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .token-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .token-title {
-            font-size: 1.8rem;
-            color: #3B2E66;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .token-value {
-            font-size: 2rem;
-            color: #FF69B4;
-            font-weight: 700;
-        }
-
-        .token-supply {
-            background: #A7C7E7;
-            border: 4px solid #2A1F4D;
-            border-radius: 25px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .supply-title {
-            font-size: 1.5rem;
-            color: #3B2E66;
-            margin-bottom: 10px;
-        }
-
-        .supply-value {
-            font-size: 2.5rem;
-            color: #3B2E66;
-            font-weight: 700;
         }
 
         /* Roadmap Section */
@@ -387,10 +318,6 @@
             .about-text {
                 font-size: 1.1rem;
             }
-
-            .cards-container {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -404,13 +331,13 @@
         
         <div class="hero-container">
             <div class="hero-left">
-               <img src="ninu-logo.png" alt="NOSTALGINU Logo" class="logo-small">
+                <img src="ninu-logo.png" alt="NOSTALGINU Logo" class="logo-small">
                 <h1 class="hero-title">NOSTALGINU<br>($NINU)</h1>
                 <p class="hero-subtitle">The Dog From Your Childhood. Reborn.</p>
                 <div class="button-group">
-                    <button class="btn btn-primary" disabled>Buy $NINU</button>
-                    <a href="#" class="btn btn-telegram">Telegram</a>
-                    <a href="#" class="btn btn-twitter">Twitter</a>
+                    <a href="#how-to-buy" class="btn btn-primary">Buy $NINU</a>
+                    <a href="https://t.me/nostalginu" class="btn btn-telegram" target="_blank">Telegram</a>
+                    <a href="https://x.com/nostalginu" class="btn btn-twitter" target="_blank">Twitter</a>
                 </div>
             </div>
             <div class="hero-right">
@@ -429,33 +356,6 @@
                 The digital dog you forgot you loved — a mix of 90s Tamagotchi, GameBoy pixels and early internet chaos.<br>
                 No utility. No promises. Just vibes, memes and pure childhood energy.
             </p>
-        </div>
-    </section>
-
-    <!-- Tokenomics Section -->
-    <section class="tokenomics">
-        <div class="section">
-            <h2 class="section-title" style="text-align: center;">Tokenomics</h2>
-            
-            <div class="token-supply">
-                <div class="supply-title">Total Supply</div>
-                <div class="supply-value">1,000,000,000 $NINU</div>
-            </div>
-
-            <div class="cards-container">
-                <div class="token-card">
-                    <div class="token-title">Creator Reserve</div>
-                    <div class="token-value">70%</div>
-                </div>
-                <div class="token-card">
-                    <div class="token-title">Liquidity</div>
-                    <div class="token-value">20%</div>
-                </div>
-                <div class="token-card">
-                    <div class="token-title">Community & Memes</div>
-                    <div class="token-value">10%</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -493,7 +393,7 @@
     </section>
 
     <!-- How to Buy Section -->
-    <section class="how-to-buy">
+    <section id="how-to-buy" class="how-to-buy">
         <div class="section">
             <h2 class="section-title" style="text-align: center;">How to Buy $NINU</h2>
             <div class="steps-container">
